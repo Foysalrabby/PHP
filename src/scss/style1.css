@@ -1,0 +1,71 @@
+       body {
+           margin-top: 160px;
+       }
+       
+       .navbar {
+           box-shadow: 2px 2px 5px #3229a6;
+           background: #fff;
+           opacity: 0.9;
+       }
+       
+       .nav-item {
+           font-size: 1.3rem;
+           padding-right: 20px;
+       }
+       
+       .nav-item:last-child {
+           padding-right: 0px;
+       }
+       
+       .navbar .nav-link {
+           color: #0e0d0d;
+       }
+       
+       .navbar .nav-link:hover {
+           color: #311696;
+       }
+       
+       h1 {
+           color: #fff;
+       }
+       
+       #showcase {
+           background-image: url('img/beauti.jpg.jpg');
+           background-size: cover;
+           position: relative;
+           min-height: 600px;
+       }
+       
+       .primary-overlay {
+           background: #050320;
+           opacity: 0.9;
+           top: 0;
+           left: 0;
+           position: absolute;
+           min-height: 600px;
+           height: 100%;
+           width: 100%;
+       }
+       
+       #author img {
+           margin-top: -50px;
+       }
+       
+       #author .card:hover {
+           background: #06258a;
+           color: #fff;
+       }
+       
+       #author .card:hover .fa {
+           color: #fff;
+       }
+       
+       #author .fa {
+           font-size: 30px;
+       }
+       
+       @media(max-width: 576px) {
+           #showcase h1 {
+               font-size: 30px;
+           }
+       }

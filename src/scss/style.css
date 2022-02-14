@@ -1,0 +1,215 @@
+body{
+  background: #ebe7e7;
+  margin-top: 0px !important;
+  font-size:sans-serif,arial,Helvetica;
+  
+}
+/* basic design design*/
+
+
+h3{
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(113, 113, 163);
+  
+}
+.btn{
+  width: 30%;
+  text-transform: uppercase;
+}
+
+/* start login design*/
+#wp-admin h3,form{
+  
+  text-transform:uppercase;
+  margin-left: 20%;
+}
+#wp-admin img{
+  margin-top: 2rem;
+  margin-left: 50%;
+  margin-right: 50%;
+ 
+  
+}
+#wp-admin form{
+  background-color: rgba(252, 251, 251, 0.911);
+  padding: 2rem;
+  border-radius: .5rem;
+}
+
+/* end login design*/
+/* start menu design*/
+#header_menubar{
+  background: #fff;
+}
+#header_menubar ul{
+ list-style: none;
+}
+#header_menubar ul li{
+  display: inline-block;
+  padding: 1rem;
+ 
+ }
+#header_menubar ul li a {
+display: inline-block;
+color: rgb(110, 52, 247);
+font-size: 1.5rem;
+text-decoration: none;
+text-transform: uppercase;
+
+ 
+}
+#header_menubar ul li a:hover{
+  background-color: rgb(57, 46, 212);
+  color:#fff;
+  border-width:3rem;
+  padding: .5rem;
+}
+/* start header design*/
+#wp-header{
+  background-color: rgba(18, 59, 241, 0.938);
+  padding: 3rem 0rem;
+}
+#wp-header a{
+  list-style: none;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  float: right;
+  text-decoration: none;
+
+}
+/* start  a post design*/
+
+#header-post .btn {
+  margin-top:27px;
+  float:right;
+  margin-right:20px;
+}
+#header-post h1{
+  margin-left: 2px;
+}
+
+/* start  table post design*/
+#header-post table{
+  margin:1rem 0rem;
+  width: 100%;
+  margin-left: 0px;
+ 
+}
+#header-post table thead {
+  background: #131212;
+  color: #fff;
+}
+
+#header-post table thead th{
+  padding: .7rem 0rem;
+  border: 1px solid #ebe7e7;
+  text-align: center;
+}
+#header-post table tbody tr td{
+  padding: .7rem 0rem;
+  border: 1px solid #ebe7e7;
+}#header-post table tbody tr td i{
+  color: rgb(22, 21, 21);
+}
+#header-post table tbody tr{
+  background-color: #fffdfd;
+  text-align: center;
+}
+#header-post table tbody tr:nth-child(even){
+  background-color: #aaa4a4;
+}
+/* Pagination  Styling */
+.pagination11 {
+  cursor: pointer;
+  list-style: none;
+  text-align:center;
+  margin:0;
+}
+.pagination11 li{
+  margin-top: .5rem;
+  display: inline-block;
+  padding: 0rem .5rem 0rem 0rem ;
+ 
+}
+
+.pagination11 li a{
+  text-decoration: none;
+  border: none;
+  background:#1e90ff;
+  padding: .2rem .7rem;
+  color:#fff;
+  border-radius: .2rem; 
+}
+/* main index src  Styling */
+body {
+  margin-top: 160px;
+}
+
+.navbar {
+  box-shadow: 2px 2px 5px #3229a6;
+  background: #fff;
+  opacity: 0.9;
+}
+.nav-item {
+  font-size: 1.3rem;
+  padding-right: 20px;
+}
+
+.nav-item:last-child {
+  padding-right: 0px;
+}
+
+.navbar.nav-link {
+  color: #0e0d0d;
+}
+
+.navbar .nav-link:hover {
+  color: #311696;
+}
+
+h1 {
+  color: #fff;
+}
+
+#showcase {
+  background-image: url('img/beauti.jpg.jpg');
+  background-size: cover;
+  position: relative;
+  min-height: 600px;
+}
+
+.primary-overlay {
+  background: #050320;
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  position: absolute;
+  min-height: 600px;
+  height: 100%;
+  width: 100%;
+}
+
+#author img {
+  margin-top: -50px;
+}
+
+#author .card:hover {
+  background: #06258a;
+  color: #fff;
+}
+
+#author .card:hover .fa {
+  color: #fff;
+}
+
+#author .fa {
+  font-size: 30px;
+}
+
+@media(max-width: 576px) {
+  #showcase h1 {
+      font-size: 30px;
+  }
+}
