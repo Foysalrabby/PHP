@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,15 @@
   <title>PHP Ajax Pagination</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <div id="main">
     <div id="header">
       <h1>PHP & Ajax Serialize Form</h1>
     </div>
-
+    
     <div id="table-data">
-      <form id="submit_form">  
+      <form id="submit_form">
         <table width="100%" cellpadding="10px">
           <tr>
             <td width="150px"><label>Name</label></td>
@@ -27,7 +29,7 @@
           <tr>
             <td><label>Gender</label></td>
             <td>
-              <input type="radio" name="gender" value="male" /> Male  
+              <input type="radio" name="gender" value="male" /> Male
               <input type="radio" name="gender" value="female" /> Female
             </td>
           </tr>
@@ -35,11 +37,11 @@
             <td><label>Country</label></td>
             <td>
               <select name="country">
-                 <option value="ind">India</option>
-                 <option value="pk">Pakistan</option>
-                 <option value="ban">Bangladesh</option>
-                 <option value="ne">Nepal</option>
-                 <option value="sl">Srilanka</option>
+                <option value="ind">India</option>
+                <option value="pk">Pakistan</option>
+                <option value="ban">Bangladesh</option>
+                <option value="ne">Nepal</option>
+                <option value="sl">Srilanka</option>
               </select>
             </td>
           </tr>
@@ -48,11 +50,54 @@
             <td><input type="button" name="submit" id="submit" value="Submit" /></td>
           </tr>
         </table>
-      </form>  
-      <div id="response"></div>  
+      </form>
+      <div id="response"></div>
     </div>
   </div>
+<script type="text/javascript" src="js/jquery.js">
+</script>
+<script>
+$(document).ready(function(){
+$("#submit").click(function(){
+ var name=$("#fullname").val();
+ var age=$("#age").val();
+ if(name==""|| age==""|| !$('input:radio[name=gender]').is(':checked')){
+  $("#response").fadeIn();
+  $("#response").removeClass("success-msg").addClass("error-msg").html("All fill are required");
+ }
+ else{
+  //$("#response").html($("#submit_form").serialize());
+  $.ajax({
+  url:"save-data.php",
+  type:"POST",
+  data:$("#submit_form").serialize(),
+  /*server loading*/
+  beforeSend :function(){
+    $("#response").fadeIn();/*css theke call*/
+  $("#response").removeClass("error-msg success-msg").addClass("process-msg").html("loding...");
+  },
+  success:function(data){
+    $("#submit_form").trigger("reset");
+    $("#response").fadeIn();/*css theke call*/
+  $("#response").removeClass("error-msg").addClass("success-msg").html(data);
+  /*hello sms 4 s delete jnno*/
+  setTimeout(function(){
+    $("#response").fadeOut("slow")
+  },4000);
+
+  }
+
+  });
+ }
+
+});
 
 
+});
+
+
+
+</script>
 </body>
+
 </html>
