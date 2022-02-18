@@ -83,207 +83,194 @@
 <script type="text/javascript">
  $(document).ready(function(){
   //Fetch All Records
-  function loadTable(){
-   $("#load-table").html("")//table insert por 2 na ase
-    $.ajax({
-      url : "http://localhost/php-rest-api/php-rest-api/api-fetch-all.php",
+  function loadTable(){ 
+    $("#load-table").html("");
+    $.ajax({ 
+      url : 'http://localhost/php-rest-api/api-fetch-all.php',
       type : "GET",
       success : function(data){
         if(data.status == false){
-       $("#load-table").append("<tr><td colspan='6'><h2>"+data.message+"</h2></td></tr>");
-        }
-        else{
-          $.each(data,function(key,value){
-            $("#load-table").append("<tr>"+
-              "<td>"+value.id +"</td>"+ 
-              "<td>"+value.name +"</td>"+ 
-              "<td>"+value.age +"</td>"+ 
-              "<td>"+value.city +"</td>"+  
-              "<td><button class='edit-btn' data-eid='"+value.id +"'>EDIT</button></td>"+
-              "<td><button class='delete-btn' data-id='"+value.id +"'>Delete</button></td>"+
-                +"</tr>")
-
+          $("#load-table").append("<tr><td colspan='6'><h2>"+ data.message +"</h2></td></tr>");
+        }else{
+          $.each(data, function(key, value){ 
+            $("#load-table").append("<tr>" + 
+                                    "<td>" + value.id + "</td>" + 
+                                    "<td>" + value.student_name +"</td>" + 
+                                    "<td>" + value.age +"</td>" + 
+                                    "<td>" + value.city +"</td>" + 
+                                    "<td><button class='edit-btn' data-eid='"+ value.id + "'>Edit</button></td>" + 
+                                    "<td><button class='delete-btn' data-id='"+ value.id + "'>Delete</button></td>" + 
+                                    "</tr>");
           });
-
         }
       }
-    
-      });
+    });
   }
+
   loadTable();
-  // function show success or error message 
-  //status from insert.php
-  function message(message,status){  //form insert php if else message.status
-    if(status==true){
+
+  //Show Success or Error Messages
+  function message(message, status){
+    if(status == true){
       $("#success-message").html(message).slideDown();
       $("#error-message").slideUp();
       setTimeout(function(){
         $("#success-message").slideUp();
-      },3000);
+      },4000);
 
-    }
-    else if(status==false){
+    }else if(status == false){
       $("#error-message").html(message).slideDown();
       $("#success-message").slideUp();
       setTimeout(function(){
         $("#error-message").slideUp();
-      },3000);
+      },4000);
     }
-
   }
-  //function for form data to json object
-function jsonData(targetForm){
 
-/*api theke value otate hole 1 array nite
-   hobe karon api json akre thake array 2 theke object nite hobe */
-   //var arr=$("#addForm").serializeArray();
-   var arr=$(targetForm).serializeArray()
-   var obj={};
- for(var a=0; a<arr.length; a++){
-  if(arr[a].value==""){
-    return false;
+  // Function for form Data to JSON Object
+  function jsonData(targetForm){
+      var arr = $(targetForm).serializeArray();
+    
+      var obj = {};
+      for(var a= 0; a < arr.length; a++){
+        if(arr[a].value == ""){
+          return false;
+        }
+        obj[arr[a].name] = arr[a].value;
+      }
+      
+      var json_string = JSON.stringify(obj);
+
+      return json_string;
+      
   }
-   obj[arr[a].name]=arr[a].value;
 
- }
-var jsonString=JSON.stringify(obj); //obj k abar json nite hobe karon apijnno
-return jsonString;
+  //Insert New Record
+  $("#save-button").on("click",function(e){
+    e.preventDefault();
 
+    var jsonObj = jsonData("#addForm");
 
-}
-
-//inserted data
-$("#save-button").on("click",function(e){
-  e.preventDefault();
-  var jsonObj = jsonData("#addForm");
-  
-  if(jsonObj == false){
-    message("all fill required",false);
-  }else{
-    $.ajax({
-      url : "http://localhost/php-rest-api/php-rest-api/api-insert.php",
+    if( jsonObj == false){
+      message("All Fields are required.",false);
+    }else{
+      $.ajax({ 
+      url : 'http://localhost/php-rest-api/api-insert.php',
       type : "POST",
-      data :jsonObj,
+      data : jsonObj,
       success : function(data){
-        message(data.message,data.status);//data insert jnno message dibe
-        if(data.status==true){
+        message(data.message, data.status);
+
+        if(data.status == true){
           loadTable();
           $("#addForm").trigger("reset");
         }
-
       }
     });
-
   }
-  
-});
-//Update form
-$("#edit-submit").on("click",function(e){
-  e.preventDefault();
-  var jsonObj = jsonData("#edit-form");
-  
-  if(jsonObj == false){
-    message("all fill required",false);
-  }else{
-    $.ajax({
-      url : "http://localhost/php-rest-api/php-rest-api/api-update.php",
-      type : "POST",
-      data :jsonObj,
-      success : function(data){
-        message(data.message,data.status); //data insert jnno message dibe
-        if(data.status==true){
-          loadTable();
-          $("#modal").hide();
-        }
+  });
 
-      }
-    });
+  //Delete Record
+  $(document).on("click",".delete-btn",function(){
+    if(confirm("Do you really want to delete this record ? ")){
+      var studentId = $(this).data("id");
+      var obj = {sid : studentId};
+      var myJSON = JSON.stringify(obj);
 
-  }
-  
-});
-//Delete record
-$(document).on("click",".delete-btn",function(){
-  if(confirm("you delete data")){
-    var student_id=$(this).data("id");
-    var obj={sid:student_id};
-    var myJson=JSON.stringify(obj);
-    var row=this; //delete korar jonno this diye tola value
-    $.ajax({
-      url : "http://localhost/php-rest-api/php-rest-api/api-delete.php",
+      var row = this;
+
+      $.ajax({
+      url : 'http://localhost/php-rest-api/api-delete.php',
       type : "POST",
-      data :myJson,
+      data : myJSON,
       success : function(data){
-        message(data.message,data.status); //data delete jnno message dibe
-        if(data.status==true){
-          loadTable();
-         $(row).closest("tr").fadeOut; //delete tr data
-         
+        message(data.message, data.status);
+
+        if(data.status == true){
+          $(row).closest("tr").fadeOut();
         }
       }
-
     });
+    }
+  });
 
-  }
-
-});
-//Single fetch Records and edit show modal box
+  //Fetch Single Record : Show in Modal Box
   $(document).on("click",".edit-btn",function(){
     $("#modal").show();
-    var student_id=$(this).data("eid");//data dorlam for edit button
-    var obj={sid:student_id};//ob akare alo key modde nilam
-    var myJson=JSON.stringify(obj);//json file sting nilam
+    var studentId = $(this).data("eid");
+    var obj = {sid : studentId};
+    var myJSON = JSON.stringify(obj);
+
     $.ajax({
-      url : "http://localhost/php-rest-api/php-rest-api/api-fetch-single.php",
+      url : 'http://localhost/php-rest-api/api-fetch-single.php',
       type : "POST",
-      data :myJson,
+      data : myJSON,
       success : function(data){
         $("#edit-id").val(data[0].id);
-        $("#edit-name").val(data[0].name);
+        $("#edit-name").val(data[0].student_name);
         $("#edit-age").val(data[0].age);
         $("#edit-city").val(data[0].city);
       }
-
     });
-
   });
-//live search
-$("#search").on("keyup",function(){
-var search_item = $(this).val();
-$("#load-table").html(""); // por 2 na ase
-    $.ajax({
-      url : "http://localhost/php-rest-api/php-rest-api/api-search.php?search=" + search_item,
-      type : "GET",
-      success : function(data){
-        if(data.status == false){
-       $("#load-table").append("<tr><td colspan='6'><h2>"+data.message+"</h2></td></tr>");
-        }
-        else{
-          $.each(data,function(key,value){
-            $("#load-table").append("<tr>"+
-              "<td>"+value.id +"</td>"+ 
-              "<td>"+value.name +"</td>"+ 
-              "<td>"+value.age +"</td>"+ 
-              "<td>"+value.city +"</td>"+  
-              "<td><button class='edit-btn' data-eid='"+value.id +"'>EDIT</button></td>"+
-              "<td><button class='delete-btn' data-id='"+value.id +"'>Delete</button></td>"+
-                +"</tr>")
 
-          });
-
-        }
-      }
-    
-      });
-
-});
-  //hide modal form 
+  //Hide Modal Box
   $("#close-btn").on("click",function(){
     $("#modal").hide();
-
   });
 
+  //Update Record
+  $("#edit-submit").on("click",function(e){
+    e.preventDefault();
 
+    var jsonObj = jsonData("#edit-form");
+
+    if( jsonObj == false){
+      message("All Fields are required.",false);
+    }else{
+      $.ajax({ 
+      url : 'http://localhost/php-rest-api/api-update.php',
+      type : "POST",
+      data : jsonObj,
+      success : function(data){
+        message(data.message, data.status);
+
+        if(data.status == true){
+          $("#modal").hide();
+          loadTable();
+        }
+      }
+    });
+  }
+  });
+
+  //Live Search Record
+  $("#search").on("keyup",function(){
+    var search_term = $(this).val();
+
+    $("#load-table").html("");
+
+    $.ajax({ 
+      url : 'http://localhost/php-rest-api/api-search.php?search=' + search_term,
+      type : "GET",
+      success : function(data){
+       if(data.status == false){
+          $("#load-table").append("<tr><td colspan='6'><h2>"+ data.message +"</h2></td></tr>");
+        }else{
+          $.each(data, function(key, value){ 
+            $("#load-table").append("<tr>" + 
+                                    "<td>" + value.id + "</td>" + 
+                                    "<td>" + value.student_name +"</td>" + 
+                                    "<td>" + value.age +"</td>" + 
+                                    "<td>" + value.city +"</td>" + 
+                                    "<td><button class='edit-btn' data-eid='"+ value.id + "'>Edit</button></td>" + 
+                                    "<td><button class='delete-btn' data-id='"+ value.id + "'>Delete</button></td>" + 
+                                    "</tr>");
+          });
+        }
+      }
+    });
+  })
  });
   
 </script>

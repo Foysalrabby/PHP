@@ -1,5 +1,5 @@
 <?php 
 
-$conn = mysqli_connect("localhost","root","","test2") or die("Connection Failed");
+$conn = mysqli_connect("localhost","root","","test") or die("Connection Failed");
 
  ?>
