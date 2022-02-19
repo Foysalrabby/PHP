@@ -1,0 +1,116 @@
+@media only screen and (max-width:1200px) {
+    body {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .mobile-menu span {
+        display: block !important;
+    }
+    .menu {
+        display: none;
+    }
+    #home4 .span_1_of_2 {
+        width: 100%;
+        display: block;
+    }
+    #home4 .progress-bar {
+        width: 100%;
+    }
+    section#home4 .row {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    #home4,
+    #home3 p {
+        width: 96%;
+        text-align: center;
+    }
+    section#home5 .span_1_of_4 {
+        width: 32.2%;
+        overflow: hidden;
+    }
+    section#home8 img {
+        margin-left: 5%;
+        margin-right: 35%;
+        margin-top: 1rem;
+    }
+    section#home8 .form-list {
+        margin-top: 15rem;
+        position: absolute;
+    }
+    section#home8 .form-list p {
+        text-align: center;
+        margin-left: 35%;
+    }
+    section#home8 .form-list p:first-child {
+        padding-top: 8rem;
+    }
+    section#home9 table {
+        margin-left: 1rem;
+    }
+}
+
+@media only screen and (max-width:980px) {
+    #home2 .span_2_of_3 {
+        width: 100%;
+    }
+    #home2 .span_1_of_3 {
+        width: 100%;
+    }
+    #home2 .span_2_of_3 img {
+        text-align: center;
+    }
+    section#home2 .form-list1 h2,
+    h3,
+    img {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:780px) {
+    #home1 .span_1_of_2 {
+        width: 100%;
+    }
+    section#home1 .form-list1 h2,
+    h1,
+    p {
+        text-align: center;
+    }
+    section#home1 .social-icon ul,
+    li,
+    i {
+        text-align: center;
+    }
+    section#home1 .btn-hero {
+        text-align: center;
+    }
+    section#home5 .span_1_of_4 {
+        width: 48.2%;
+        overflow: hidden;
+    }
+    section#home5 .span_1_of_4 img {
+        padding: 0rem 1rem;
+    }
+    section#home6 .span_1_of_2 {
+        width: 100%;
+        text-align: center;
+    }
+    section#home6 .span_1_of_4 i {
+        margin-right: -115%;
+    }
+}
+
+@media only screen and (max-width:580px) {
+    section#home5 .span_1_of_4 {
+        width: 67.2%;
+        overflow: hidden;
+    }
+    section#home5 .image-gallery img {
+        margin-left: 35%;
+        padding-right: 13rem;
+        width: 30rem;
+        height: 30rem;
+    }
+}

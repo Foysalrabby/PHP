@@ -1,0 +1,430 @@
+/* BASIC SETUP */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    text-rendering: optimizeLegibility;
+    line-height: 1.9rem;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+ul li {
+    list-style: none;
+}
+
+h1 {
+    font-size: 3.1rem;
+    color: black;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+}
+
+
+/* Other Basic SETUP */
+
+.row {
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+section {
+    padding: 8rem 0rem;
+    background-color: rgb(245, 241, 241);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: rgb(143, 134, 134);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2rem;
+    padding-bottom: .9rem;
+    color: rgb(19, 18, 18);
+    text-transform: capitalize
+}
+
+h3 {
+    font-size: 2.5rem;
+    color: rgb(19, 18, 18);
+    text-transform: uppercase;
+    padding-bottom: .8rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+p {
+    font-size: 1.5rem;
+    color: rgb(53, 50, 50);
+    padding: 1rem 0rem;
+    letter-spacing: .1rem;
+}
+
+
+/* START HEADER FILE */
+
+header {
+    background-color: rgba(212, 212, 212, 0.459);
+    overflow: hidden;
+}
+
+.logo {
+    float: left;
+    height: 5.5rem;
+    font-weight: 5.5rem;
+}
+
+.menu {
+    float: right;
+    margin-top: 2rem;
+}
+
+.menu li {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0rem 1.3rem;
+}
+
+.menu ul li a:link,
+.menu ul li a:visited {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    display: inline-block;
+    border-radius: .1rem;
+}
+
+.menu ul li a:hover {
+    background-color: darkgray;
+}
+
+
+/* START section1 FILE */
+
+section#home1 {
+    background-color: rgba(212, 212, 212, 0.459);
+}
+
+section#home1 .form-list1 {
+    text-align: left;
+    margin-left: 3rem;
+}
+
+section#home2 .form-list1 {
+    text-align: left;
+    margin-left: 3rem;
+}
+
+section img {
+    width: 40rem;
+    height: 40rem;
+    border-radius: 3rem;
+}
+
+section#home4 .social-icon ul {
+    float: left;
+}
+
+.social-icon ul li {
+    margin: .5rem 0rem;
+    display: inline-block;
+}
+
+.social-icon ul li i {
+    color: rgb(54, 49, 49);
+    font-size: 1.5rem;
+    padding: 0rem .5rem;
+}
+
+.social-icon ul li i:first-child {
+    margin-left: 0rem;
+}
+
+.btn-hero {
+    margin-top: 7.5rem;
+    font-size: 1.5rem;
+}
+
+.btn-hero a {
+    padding: 0.5rem 1.5rem;
+    background-color: gold;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5rem;
+}
+
+
+/*Mobile menu*/
+
+.mobile-menu span {
+    color: #fff;
+    font-size: 3rem;
+    float: right;
+    padding: 0rem 2rem;
+    margin-top: 3rem;
+    display: none;
+}
+
+.mobile-menu span:hover {
+    cursor: pointer;
+}
+
+.overlay {
+    width: 0;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    z-index: 1;
+    transition: .5s;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+}
+
+.overlay a {
+    text-decoration: none;
+    display: block;
+    font-size: 2rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 1rem 0rem;
+}
+
+.overlay a:hover {
+    color: #fff;
+}
+
+.overlay a.closebtn {
+    position: relative;
+    float: right;
+    font-size: 4rem;
+    padding: 0rem 2rem;
+}
+
+.sticky .mobile-menu span {
+    margin-top: 1.2rem;
+    line-height: 1;
+}
+
+
+/* START stciky FILE */
+
+.sticky {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: rgba(220, 205, 233, 0.9);
+    padding: 1rem 0rem;
+    box-shadow: 0 .4rem 0 rgba(143, 143, 168, 0.973);
+    z-index: 9999;
+}
+
+.sticky .logo {
+    margin-top: .3rem;
+}
+
+.sticky .sub-menu {
+    margin-top: .4rem;
+}
+
+
+/* START SECTION2 FILE */
+
+section#home2 {
+    background-color: rgb(245, 241, 241);
+}
+
+.info-img img {
+    margin-top: 7rem;
+    height: 25rem;
+    width: 25rem;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+}
+
+
+/* START SECTION2 FILE */
+
+section#home3 {
+    background-color: rgb(245, 241, 241);
+    text-align: center;
+}
+
+#home4.progress-bar {
+    width: 30rem;
+    height: 0rem;
+    margin-top: 0rem;
+    position: absolute;
+}
+
+section#home4 h4 {
+    padding-bottom: .9rem;
+    padding-top: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+section#home4 {
+    margin-top: -11rem;
+}
+
+section#home4 .row {
+    background-color: rgba(250, 245, 245, 0.938);
+    overflow: hidden;
+    width: 62%;
+    padding-left: 7rem;
+    padding-bottom: 2rem;
+}
+
+
+/* START PROTFOLOIO FILE */
+
+section#home5 {
+    text-align: center;
+}
+
+section#home5 h3 {
+    padding-bottom: 1.5rem;
+}
+
+section#home5 img {
+    padding: .5rem 6rem;
+}
+
+section#home6 i {
+    font-size: 4.5rem;
+    color: rgb(22, 19, 19);
+    float: right;
+}
+
+section#home6 .call-1 {
+    background-color: rgb(240, 252, 252);
+    padding: .5rem;
+    padding-left: 2rem;
+    text-align: left;
+}
+
+section#home7 hr {
+    background: rgb(151, 140, 140);
+    height: 1rem;
+    width: 100%;
+}
+
+section#home8 span {
+    color: black;
+    font-size: 4rem;
+}
+
+section#home8 img {
+    width: 10rem;
+    height: 10rem;
+    float: right;
+}
+
+section#home8 .form-list {
+    text-align: right;
+    margin-top: 4rem;
+    position: relative;
+}
+
+section#home8 .form-list p {
+    padding-bottom: 0rem;
+    margin-right: 12rem;
+}
+
+footer {
+    text-align: center;
+    background-color: rgba(212, 212, 212, 0.459);
+    padding: 2rem 0rem;
+    overflow: hidden;
+}
+
+footer .social-icon ul {
+    text-align: center;
+}
+
+footer .social-icon ul li i:hover {
+    background-color: rgb(54, 54, 218);
+    height: 3rem;
+    width: 3rem;
+    border-radius: 5rem;
+    transform: rotate(360);
+    position: relative;
+    line-height: 2.6rem;
+    color: #fff;
+}
+
+section#home9 {
+    text-align: center;
+}
+
+section#home9 table {
+    background-color: rgb(241, 235, 235);
+    width: 100%;
+    padding: 2rem 2rem;
+    margin-top: 1rem;
+}
+
+section#home9 table td {
+    display: block;
+    text-align: left;
+    font-size: 1.5rem;
+    padding: .5rem 0rem;
+}
+
+section#home9 table td input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: .5rem 0rem;
+    border-radius: 4rem;
+    border-top: 0rem;
+    border-left: 0rem;
+}
+
+section#home9 .form-list {
+    text-align: left;
+    margin-left: 6rem;
+    margin-top: 2rem;
+}
+
+section#home9 h5 {
+    font-size: 2rem;
+}
+
+section#home9 table tr .btn-hero1 {
+    margin-top: 3rem;
+}
+
+section#home9 table tr td a {
+    margin-top: 2rem;
+    padding: 0.5rem 1.8rem;
+    background-color: gold;
+    text-decoration: none;
+    border-radius: 5rem;
+}

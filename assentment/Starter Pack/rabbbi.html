@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="resources/img/favicon.png" type="image/x-icon">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- RESOURCES FILES -->
+    <link rel="stylesheet" href="resources/css/responsive.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <!-- VENDORS FILES -->
+    <link rel="stylesheet" href="vendors/css/grid.css">
+    <link rel="stylesheet" href="vendors/css/normalize.css">
+    <link rel="stylesheet" href="vendors/css/progress-bar.css">
+
+    <title>portfolio</title>
+</head>
+
+<body>
+    <!-- HEADER FILE -->
+    <header id="home">
+        <nav>
+            <div class="container">
+                <div class="row">
+                    <div class="logo">
+                        <a href="#home1">
+                            <img src="resources/img/logo.png" alt="logo" class="logo">
+                        </a>
+                    </div>
+                    <div class="menu">
+                        <ul class="sub-menu">
+                            <li class="active">
+                                <a href="#home1">About</a>
+                            </li>
+                            <li>
+                                <a href="#home3">Service</a>
+                            </li>
+                            <li>
+                                <a href="#home4">Skill</a>
+                            </li>
+                            <li>
+                                <a href="#home5">Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="#home6"> Experience</a>
+                            </li>
+                            <li>
+                                <a href="#home9">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mobile-menu">
+                        <span onclick="openNav()">&#9776;</span>
+                        <div id="mynav" class="overlay">
+                            <a href="javascript:void()" onclick="closeNav()" class="closebtn">&times;</a>
+                            <div class="overlay-content">
+                                <a onclick="closeNav()" href="#home1">About</a>
+
+                                <a onclick="closeNav()" href="#home3">Service</a>
+
+                                <a onclick="closeNav()" href="#home4">Skill</a>
+
+                                <a onclick="closeNav()" href="#home5">Portfolio</a>
+
+                                <a onclick="closeNav()" href="#home6"> Experience</a>
+
+
+                                <a onclick="closeNav()" href="#home9">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--END HEADER FILE -->
+    <!--START HELLO FILE -->
+    <section id="home1" class="clearfix">
+        <div class="row">
+            <div class="col span_1_of_2">
+                <div class="portfolio1">
+                    <img src="resources/img/work1.png" alt="worker">
+                </div>
+            </div>
+            <div class="col span_1_of_2">
+                <div class="form-list1">
+                    <h1>hello!!</h1>
+                    <h2>I'm Foysal Hossen Rabby</h2>
+                    <p class="short-description">Web Developar & Mobile app</p>
+                    <div class="social-icon">
+                        <ul>
+                            <li> <a href=""><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li> <a href=""><i class="fab fa-facebook"></i></a>
+                            </li>
+                            <li> <a href=""><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li> <a href=""><i class="fab fa-youtube"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="btn-hero">
+                        <a href="#">Get in Touche <i class="fas fa-arrow-right" ></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--END HEADER FILE -->
+    <!--START INFORMATION FILE -->
+    <section id="home2" class="clearfix js-service-section1">
+        <div class="row">
+            <div class="col span_2_of_3">
+                <div class="form-list1">
+                    <h2>hello!I'm Foysal Hossen Rabby</h2>
+                    <p class="short-description">Iam the studied at Hajee Mohammad Danesh Science & Technology University.I have interest in Web development & Design. So I am try to learn this objects.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium sint quis
+                        quae officia, suscipit eum minusipsum dolor, sit amet consectetur adipisicing elit. Accusantium sint quis quae officia, suscipit eum minus...</p>
+                    <p> Age : 20</p>
+                    <p> E-mail : rabbi44318@gmail.com</p>
+                    <p>Mail : rabbi44318@yahoo.com</p>
+                    <p> Phone : 003456745</p>
+                    <p> Adress : Rajshahi,Dhaka,Bangladesh</p>
+                    <p> Status : Available</p>
+                </div>
+            </div>
+            <div class="col span_1_of_3">
+                <div class="info-img">
+                    <img src="resources/img/2.jpg" alt="info-img">
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--END INFORMATION FILE -->
+    <!--START SERVICE FILE -->
+    <section class=" clearfix" id="home3">
+        <div class="row">
+            <h3>OUR SERVICE</h3>
+            <p class="short-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nihil odio tempora ex. Eveniet quae nam repellendus earum, non possimus voluptate est? Voluptatibus, obcaecati sequi!
+            </p>
+        </div>
+    </section>
+    <!--END service FILE -->
+    <!--START template FILE -->
+    <section id="home3" class="clearfix">
+        <div class="row">
+            <div class="col span_1_of_4">
+                <h2>web design</h2>
+            </div>
+            <div class="col span_1_of_4">
+                <h2>graphic design</h2>
+            </div>
+            <div class="col span_1_of_4">
+                <h2>ui/ux design</h2>
+            </div>
+            <div class="col span_1_of_4">
+                <h2>app development</h2>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!--END template FILE -->
+    <!--START ANIMATED FILE -->
+    <section id="home3" class="clearfix">
+        <div class="row">
+            <h3>OUR SKILLS</h3>
+            <p class="short-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nihil odio tempora ex. Eveniet quae nam repellendus earum, non possimus voluptate est? Voluptatibus, obcaecati sequi!
+            </p>
+        </div>
+    </section>
+    <!--END animated FILE -->
+    <!--START ANIMATED progressbar FILE -->
+    <section id="home4" class="clearfix">
+        <div class="row">
+            <div class="col span_1_of_2">
+                <h4>Html</h4>
+                <div class="progress-bar">
+                    <div class="progress" data-percent="60" data-color="yellow">
+                        <span>60%</span>
+                    </div>
+                </div>
+                <h4>css3</h4>
+                <div class="progress-bar">
+                    <div class="progress" data-percent="90" data-color="yellow">
+                        <span>90%</span>
+                    </div>
+                </div>
+                <h4>javascript</h4>
+                <div class="progress-bar">
+                    <div class="progress" data-percent="80" data-color="yellow">
+                        <span>80%</span>
+                    </div>
+                </div>
+                <h4>react</h4>
+                <div class="progress-bar">
+                    <div class="progress" data-percent="40" data-color="yellow">
+                        <span>40%</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col span_1_of_2 ">
+                <h4>php</h4>
+                <div class="progress-bar">
+                    <div class="progress" data-percent="60" data-color="yellow">
+                        <span>60%</span>
+                    </div>
+                </div>
+                <h4>wordpress</h4>
+                <div class="progress-bar">
+                    <div class="progress" data-percent="90" data-color="yellow">
+                        <span>90%</span>
+                    </div>
+                </div>
+                <h4>mysql</h4>
+                <div class="progress-bar">
+                    <div class="progress" data-percent="80" data-color="yellow">
+                        <span>80%</span>
+                    </div>
+                </div>
+                <h4>photoshop</h4>
+                <div class="progress-bar">
+                    <div class="progress" data-percent="40" data-color="yellow">
+                        <span>40%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--END animated FILE -->
+    <!--START POTRFOLIO FILE -->
+    <section id="home5" class="clearfix">
+        <div class="row">
+            <h3>POTRFOLIO</h3>
+        </div>
+        <div class="image-gallery">
+            <div class="row">
+                <div class="col span_1_of_4">
+                    <img src="resources/img/image3.png" alt="mm">
+                </div>
+                <div class="col span_1_of_4">
+                    <img src="resources/img/image 1.png" alt="mm">
+                </div>
+                <div class="col span_1_of_4">
+                    <img src="resources/img/camera2.webp" alt="mm">
+                </div>
+                <div class="col span_1_of_4">
+                    <img src="resources/img/images2.png" alt="mm">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col span_1_of_4">
+                    <img src="resources/img/3.jpg" alt="mm">
+                </div>
+                <div class="col span_1_of_4">
+                    <img src="resources/img/camera3.png" alt="mm">
+                </div>
+                <div class="col span_1_of_4">
+                    <img src="resources/img/phone.png" alt="mm">
+                </div>
+                <div class="col span_1_of_4">
+                    <img src="resources/img/camera2.webp" alt="mm">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--END POTRFOLIO FILE -->
+    <!--START Experince  FILE -->
+    <section id="home6" class="clearfix">
+        <h3>EXPERIENCE</h3>
+        <div class="row">
+            <div class="col span_1_of_2 call-1">
+                <div class="row">
+                    <div class="col span_1_of_2">
+                        <h2>ui/UX design</h2>
+                        <P>Lorem ipsum dolor sit </P>
+                    </div>
+                    <div class="col span_1_of_4">
+                        <i class="fas fa-address-card"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit alias molestiae asperiores? Lorem ipsum dolor sit, amet consectetur
+                        </p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit alias molestiae asperiores? Lorem ipsum dolor sit, amet consectetur
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col span_1_of_2 call-1">
+                <div class="row">
+                    <div class="col span_1_of_2">
+                        <h2>App development</h2>
+                        <P>Lorem ipsum dolor sit </P>
+                    </div>
+                    <div class="col span_1_of_4">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit alias molestiae asperiores? Lorem ipsum dolor sit, amet consectetur
+                        </p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit alias molestiae asperiores? Lorem ipsum dolor sit, amet consectetur
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--END Experince FILE -->
+    <!--START Experince 2 FILE -->
+    <section id="home7" class="clearfix">
+        <div class="row">
+            <div class="col span_1_of_2">
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nisi illo ab distinctio aspernatur dignissimos quod cum eligendi at illum?</p>
+                <div class="row">
+                    <div class="col">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nisi illo ab distinctio aspernatur dignissimos quod cum eligendi at illum?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col span_1_of_2">
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nisi illo ab distinctio aspernatur dignissimos quod cum eligendi at illum?</p>
+                <div class="row">
+                    <div class="col">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nisi illo ab distinctio aspernatur dignissimos quod cum eligendi at illum?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!--END Experince FILE -->
+    <!--START testimonial 2 FILE -->
+    <section id="home8" class="clearfix">
+        <h3>client testimonial</h3>
+        <div class="row">
+            <div class="col span_1_of_2">
+                <p><span>"</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, laudantium?</p>
+
+                <img src="resources/img/1.jpg" alt="11">
+                <div class="form-list">
+                    <p><strong>Anika</strong> </p>
+                    <p>App developer</p>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p><span>"</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, laudantium?</p>
+
+                        <img src="resources/img/2.jpg" alt="11">
+                        <div class="form-list">
+                            <p><strong>Jerin</strong> </p>
+                            <p>Game developer</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col span_1_of_2">
+                <p><span>"</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, laudantium?</p>
+
+                <img src="resources/img/3.jpg" alt="11">
+                <div class="form-list">
+                    <p><strong>Foysal</strong> </p>
+                    <p>Web developer</p>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p><span>"</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, laudantium?</p>
+
+                        <img src="resources/img/4.jpg" alt="11">
+                        <div class="form-list">
+                            <p><strong>Rabby</strong> </p>
+                            <p>Graphics designer</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--END testimonial 2FILE -->
+    <!--START contact FILE -->
+    <section id="home9" class="clearfix">
+        <h3>contact me</h3>
+        <div class="row">
+            <div class="col span_1_of_2">
+                <div class="from-group">
+                    <form action="">
+                        <table>
+                            <tr>
+                                <td> Name</td>
+                                <td> <input type="text" placeholder=""></td>
+                            </tr>
+                            <tr>
+                                <td> Email</td>
+                                <td> <input type="text" placeholder=""></td>
+                            </tr>
+                            <tr>
+                                <td> Password</td>
+                                <td> <input type="password" placeholder=""></td>
+                            </tr>
+                            <tr>
+
+                                <td>
+                                    <div class="btn-hero1"><a href="#">send</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+
+            </div>
+            <div class="col span_1_of_2">
+                <div class="form-list">
+                    <h5>lets talk how can help yuo?</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed nam quae illo aliquam, nesciunt cum ipsam corporis est tenetur earum.</p>
+                    <p> Age : 20</p>
+                    <p> E-mail : rabbi44318@gmail.com</p>
+                    <p>Mail : rabbi44318@yahoo.com</p>
+                    <p> Phone : 003456745</p>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--END contact 2FILE -->
+    <!--START fopter FILE -->
+    <footer class="clearfix">
+        <h3>water patteron</h3>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <div class="social-icon">
+            <ul>
+                <li> <a href=""><i class="fab fa-twitter"></i></a>
+                </li>
+                <li> <a href=""><i class="fab fa-facebook"></i></a>
+                </li>
+                <li> <a href=""><i class="fab fa-instagram"></i></a>
+                </li>
+                <li> <a href=""><i class="fab fa-linkedin"></i></a>
+                </li>
+                <li> <a href=""><i class="fab fa-google-plus"></i></a>
+                </li>
+                <li> <a href=""><i class="fab fa-youtube"></i></a>
+                </li>
+            </ul>
+        </div>
+        <p>Lorem ipsum dolor sit.</p>
+
+
+    </footer>
+    <!-- jquery for plugin FILES -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- jquery stiky header FILES -->
+    <script src="vendors/js/jquery.waypoints.min.js"></script>
+    <!-- SCRIPT FILES -->
+    <script src="vendors/js/html5shiv.min.js"></script>
+    <script src="vendors/js/respond.min.js"></script>
+    <script src="vendors/js/selectivizr-min.js"></script>
+    <script src="resources/js/main.js"></script>
+
+    <!-- jquery for animated pluin FILES -->
+    <script src="vendors/js/progress-bar.js"></script>
+
+</body>
+
+</html>
